@@ -1,17 +1,23 @@
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    return &input.trim_end().trim_start();
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    let mut n_str = String::from(input);
+    n_str.push_str(" world!");
+    return n_str.to_string();
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    return input.replace("cars", "balloons").to_string();
 }
 
 fn main() {
     // You can optionally experiment here.
+    println!("{}", replace_me("cars are dangerous"));
 }
 
 #[cfg(test)]
